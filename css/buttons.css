@@ -1,0 +1,127 @@
+.landing-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.landing-icons .social-link {
+  color: white;
+  position: relative;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 0.25rem;
+  width: 4rem;
+}
+
+.landing-icons .social-link .circle {
+  animation: outWaveOut 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+  fill: none;
+  stroke-dasharray: 40;
+  transition: all 0.2s ease-in-out;
+}
+
+.landing-icons .social-link .social {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0px;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+
+.landing-icons .social-link .social-svg {
+  fill: white;
+}
+
+.landing-icons .social-link .label {
+  display: none;
+}
+
+.landing-icons .social-link:hover {
+  cursor: pointer;
+}
+
+.landing-icons .social-link:hover .circle {
+  animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorBlackIcon 1s linear forwards;
+  fill: white;
+  fill-opacity: 1;
+}
+
+.landing-icons .social-link:hover .social-svg {
+  fill: #000;
+}
+
+.landing-icons .social-link:hover .label {
+  display: unset !important;
+  position: relative;
+  top: -2rem;
+}
+
+.landing-icons .email:hover .circle {
+  animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorEmail 1s linear forwards;
+}
+
+.landing-icons .email:hover .social-svg {
+  fill: #d44638;
+}
+
+.landing-icons .linkedin:hover .circle {
+  animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorLinkedin 1s linear forwards;
+}
+
+.landing-icons .linkedin:hover .social-svg {
+  fill: #007bb6;
+}
+
+.landing-icons .twitter:hover .circle {
+  animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorTwitter 1s linear forwards;
+}
+
+.landing-icons .twitter:hover .social-svg {
+  fill: #1da1f2;
+}
+
+@keyframes outWaveIn {
+  to {
+    stroke-dasharray: 510;
+    stroke-width: 0.5rem;
+  }
+}
+
+@keyframes outWaveOut {
+  from {
+    stroke: white;
+    stroke-dasharray: 510;
+    stroke-width: 0.5rem;
+  }
+
+  to {
+    stroke: white;
+    stroke-dasharray: 83;
+    stroke-width: 0.5rem;
+  }
+}
+
+@keyframes colorBlackIcon {
+  to {
+    stroke: #000;
+  }
+}
+
+@keyframes colorEmail {
+  to {
+    stroke: #b23121;
+  }
+}
+
+@keyframes colorLinkedin {
+  to {
+    stroke: #007bb6;
+  }
+}
+
+@keyframes colorTwitter {
+  to {
+    stroke: #1da1f2;
+  }
+}
+
+/*# sourceMappingURL=buttons.css.map */
